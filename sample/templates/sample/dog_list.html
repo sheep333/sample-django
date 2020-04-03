@@ -1,0 +1,19 @@
+{{ request.path }}
+<table>
+  {% for dog in dog_list %}
+  <tr>
+    <td>
+      {{ dog.pk }}
+    </td>
+    <td>
+      {{ dog.name }}
+    </td>
+    <td>
+      {{ dog.age }}
+    </td>
+    <td>
+      {{ dog.kind }}
+    </td>
+  </tr>
+  {% endfor %}
+<table>

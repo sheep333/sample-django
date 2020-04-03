@@ -1,0 +1,10 @@
+<h1>{{ text }}</h1>
+
+<form method='post'>
+  <p>
+    <label>テキスト入力</label>
+    <input type='text' name='text'></input>
+  </p>
+  <button type=submit>送信</button>
+  {% csrf_token %}
+</form>

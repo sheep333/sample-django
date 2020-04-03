@@ -1,0 +1,26 @@
+<h1>{{ text }}</h1>
+
+{# /sample/sample3/というpathからアクセスがあったときのみ表示します #}
+{% if request.path == '/sample/sample3/' %}
+
+{{ text }}だよ！
+
+{# /sample/sample4/ か /sample/sample5/ というpathからアクセスがあったときのみ表示します #}
+{% elif request.path == '/sample/sample4/' or request.path == '/sample/sample5/' %}
+
+{# textのリストをループで回して全て表示します #}
+<p>
+{% for t in text %}
+{{ t }}<br>
+{% endfor %}
+</p>
+
+{# 数値の条件判定も行えます #}
+{% if num == 6 %}
+正解です！
+{% endif %}
+
+{# pythonで使える関数が使えるわけではなくテンプレートタグに組み込まれているものが使える #}
+{# https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#static #}
+
+{% endif %}

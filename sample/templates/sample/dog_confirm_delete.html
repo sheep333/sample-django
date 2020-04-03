@@ -1,0 +1,5 @@
+<form method="post">
+    {% csrf_token %}
+    <p>{{ dog.name }}/{{ dog.age }}を削除しますか？</p>
+    <button type="submit">はい</button>
+</form>
