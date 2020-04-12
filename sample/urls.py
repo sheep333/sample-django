@@ -1,11 +1,11 @@
 from django.urls import path
-from .views import (
-    sample, sample1, Sample2, Sample3, Sample4, Sample5, post_sample, post_sample1,
-    Sample1Post, Sample2Post, Sample3Post, Sample4Post, create_dog, DogFormView,
-    DogListView, list_dog, detail_dog, DogDetailView, update_dog, DogUpdateView,
-    delete_dog, DogDeleteView
-)
 from django.views.generic import TemplateView
+
+from .views import (DogDeleteView, DogDetailView, DogFormView, DogListView,
+                    DogUpdateView, Sample1Post, Sample2, Sample2Post, Sample3,
+                    Sample3Post, Sample4, Sample4Post, Sample5, create_dog,
+                    delete_dog, detail_dog, list_dog, post_sample,
+                    post_sample1, sample, sample1, update_dog)
 
 app_name = 'sample'
 

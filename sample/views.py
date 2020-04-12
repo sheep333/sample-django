@@ -1,10 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
-from django.views.generic import (
-    View, TemplateView, FormView, CreateView, UpdateView, DetailView, ListView, DeleteView
-)
-from .forms import Sample1Form, Sample2Form, Sample3Form, DogForm
+from django.views.generic import (CreateView, DeleteView, DetailView, FormView,
+                                  ListView, TemplateView, UpdateView, View)
+
+from .forms import DogForm, Sample1Form, Sample2Form, Sample3Form
 from .models import Dog
 
 
