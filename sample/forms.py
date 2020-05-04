@@ -99,3 +99,8 @@ class DogForm(forms.ModelForm):
     class Meta:
         model = Dog
         fields = '__all__'
+
+    birthday = forms.DateField(
+        input_formats=('%Y-%m-%d', '%Y/%m/%d'),
+        required=True,
+    )
