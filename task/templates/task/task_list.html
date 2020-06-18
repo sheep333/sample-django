@@ -1,0 +1,52 @@
+{% extends 'task/base.html' %}
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">タスクリスト</h4>
+            <p class="card-category">毎日、練習に励みましょう！</p>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="text-primary">
+                  <tr>
+                    <th>カテゴリー</th>
+                    <th>タスク</th>
+                    <th>完了</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for mytask in mytask_list %}
+                  <tr class="card-body">
+                    <td>{{ mytask.task.category }}</td>
+                    <td>{{ mytask.task.content }}</td>
+                    <td>
+                      {% if mytask.finished %}
+                      <button class="btn btn-primary pull-right" disabled>
+                        完了
+                      </button>
+                      {% else %}
+                      <form method="post" action="{% url 'task:update' mytask.pk %}">
+                        <button class="btn btn-primary pull-right">
+                          未完了
+                        </button>
+                        {% csrf_token %}
+                      </form>
+                      {% endif %}
+                    </td>
+                    {% empty %}
+                    タスクはありません 
+                  </tr>
+                </tbody>
+                {% endfor %}
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

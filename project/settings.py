@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sample.apps.SampleConfig',
     'fortune.apps.FortuneConfig',
+    'task.apps.TaskConfig',
 ]
 
 
