@@ -7,9 +7,43 @@
   <link rel="stylesheet" type="text/css" href="{% static 'task/css/material-dashboard.min.css' %}">
   <title>{% block meta_title %}{% endblock %}</title>
 <body>
-
-{% if messages %}
-  {# Django のメッセージに記録している内容があればここで表示 #}
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="{% url 'register:top' %}">サンプルアプリ</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          {% if user.is_authenticated %}
+          <li>
+            <a class="nav-item nav-link" href="{% url 'register:user_detail' user.pk %}">アカウント情報</a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" href="{% url 'register:user_update' user.pk %}">アカウント情報</a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" href="{% url 'register:logout' %}">ログアウト</a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" href="{% url 'register:password_change' %}">パスワードの変更</a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" href="{% url 'register:email_change' %}">メールアドレスの変更</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-item nav-link" href="{% url 'register:login' %}">
+            ログインはこちら
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  {% if messages %}
   <div class="container">
     <div class="row">
       <div class="col-12">
