@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'sample.apps.SampleConfig',
     'fortune.apps.FortuneConfig',
     'task.apps.TaskConfig',
+    'register.apps.RegisterConfig',
 ]
 
 
@@ -122,3 +123,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Add Custom User Model
+AUTH_USER_MODEL = 'register.User'
+
+# Login Redirect
+LOGIN_REDIRECT_URL = 'task:list'
+
+# メールをコンソールに表示する
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
