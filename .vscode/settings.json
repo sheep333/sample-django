@@ -1,5 +1,6 @@
 {
   "[python]": {
     "editor.tabSize": 4
-  }
+  },
+  "python.pythonPath": "~/.local/share/virtualenvs/sample-django-Z9lgU4Zx/bin/python"
 }
