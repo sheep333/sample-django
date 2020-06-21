@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.views.generic import DetailView
 
 from .models import Place, PlaceComment
+
 # Create your views here.
 
 def detail_place(request, pk):

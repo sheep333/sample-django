@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import ListView
 from django.shortcuts import get_object_or_404, redirect
+from django.views.generic import ListView
 
 from .models import MyTask
 
@@ -32,4 +32,3 @@ class MyTaskUpdateView(UpdateView):
     template_name = "task/task_form.html"
     success_url = "/task"
 '''
-

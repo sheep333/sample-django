@@ -1,11 +1,9 @@
 from django import forms
-from django.contrib.auth.forms import (
-    AuthenticationForm, UserCreationForm, PasswordChangeForm,
-    PasswordResetForm, SetPasswordForm
-)
 from django.contrib.auth import authenticate, get_user_model
+from django.contrib.auth.forms import (AuthenticationForm, PasswordChangeForm,
+                                       PasswordResetForm, SetPasswordForm,
+                                       UserCreationForm)
 from django.core.exceptions import ObjectDoesNotExist
-
 
 User = get_user_model()
 

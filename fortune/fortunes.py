@@ -1,5 +1,6 @@
 from datetime import datetime
-from .models import UserFortuneType, FortuneBoard
+
+from .models import FortuneBoard, UserFortuneType
 
 
 class Fortune:

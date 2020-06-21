@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import MyTaskListView, update_mytask
 
 app_name = 'task'

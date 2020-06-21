@@ -1,4 +1,4 @@
-from math import sin, cos, tan, atan2, pi
+from math import atan2, cos, pi, sin, tan
 
 
 class Map:

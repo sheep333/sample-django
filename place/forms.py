@@ -2,6 +2,7 @@ from django import forms
 
 from .models import Place
 
+
 # inline_formsetでPlaceとPlaceCommentを同時に取得
 class PlaceForm(forms.ModelForm):
     class Meta:
