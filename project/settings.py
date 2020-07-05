@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'fortune.apps.FortuneConfig',
     'task.apps.TaskConfig',
     'register.apps.RegisterConfig',
+    'post.apps.PostConfig',
 ]
 
 
