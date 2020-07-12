@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'task.apps.TaskConfig',
     'register.apps.RegisterConfig',
     'post.apps.PostConfig',
+    'place.apps.PlaceConfig',
 ]
 
 

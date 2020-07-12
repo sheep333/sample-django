@@ -1,0 +1,40 @@
+{% extends 'place/base.html' %}
+{% block content %}
+<div class="card col-md-12 m-5">
+  <div class="card-header card-header-primary">
+    場所
+  </div>
+  <div class="card-body">   
+    <h4 class="card-title">{{ place.name }}</h4>
+    <p>{{ place.text }}</p>
+  </div>
+</div>
+<div class="card col-md-12 m-5">
+  <div class="card-header card-header-primary">
+    コメント
+  </div>
+  {% for comment in place.placecomment_set.all %} 
+  <div class="card-body">
+    <p>{{ comment.user_name }}</p>
+    <p>{{ comment.text }}</p>
+  </div>
+  {% endfor %}
+  </div>
+</div>
+<div class="card col-md-12 m-5">
+  <div class="card-header card-header-primary">
+    コメントする
+  </div>
+  <form method="post">
+    <div class="card-body">   
+      {{ form.as_p }}
+    </div>
+    {% csrf_token %}
+    <button type="submit">投稿する</button>
+  </form>
+</div>
+  <p></p>
+  
+{% endblock %}
+
+
