@@ -7,14 +7,14 @@ class Place(models.Model):
     lan = models.FloatField()
     lat = models.FloatField()
     attribute = models.CharField(max_length=50)
-   
+
     def __str__(self):
         return self.name
 
 
 class PlaceComment(models.Model):
     place = models.ForeignKey(Place, on_delete=models.CASCADE)
-    user_name = models.CharField('ユーザ名',max_length=50)
+    user_name = models.CharField('ユーザ名', max_length=50)
     text = models.TextField('コメント')
 
     def __str__(self):
