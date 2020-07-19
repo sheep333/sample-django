@@ -7,6 +7,9 @@ name = "pypi"
 django = "*"
 isort = "*"
 flake8 = "*"
+selenium = "*"
+beautifulsoup4 = "*"
+openpyxl = "*"
 
 [dev-packages]
 
